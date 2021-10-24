@@ -253,7 +253,7 @@ extension URLSession {
     }
 }
 
-#if canImport(Combine)
+#if !(os(iOS) && (arch(i386) || arch(arm)))
 import Combine
 
 @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
